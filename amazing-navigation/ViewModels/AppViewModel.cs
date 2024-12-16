@@ -5,12 +5,12 @@ using CommunityToolkit.Mvvm.Input;
 
 namespace amazing_navigation.ViewModels;
 
-public partial class MainViewModel : ViewModel
+public partial class AppViewModel : ViewModel
 {
     [ObservableProperty]
     private INavigationService _navigationService;
 
-    public MainViewModel(INavigationService navigationService)
+    public AppViewModel(INavigationService navigationService)
     {
         NavigationService = navigationService;
     }

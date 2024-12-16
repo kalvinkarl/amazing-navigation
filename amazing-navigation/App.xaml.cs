@@ -2,6 +2,7 @@
 using amazing_navigation.Helpers;
 using amazing_navigation.Services;
 using amazing_navigation.ViewModels;
+using amazing_navigation.Views;
 using Microsoft.Extensions.DependencyInjection;
 using System.Windows;
 
@@ -14,11 +15,11 @@ public partial class App : Application
     public App()
     {
         IServiceCollection services = new ServiceCollection();
-        services.AddSingleton<MainWindow>(provider => new MainWindow
+        services.AddSingleton<AppView>(provider => new AppView
         {
-            DataContext = provider.GetRequiredService<MainViewModel>()
+            DataContext = provider.GetRequiredService<AppViewModel>()
         });
-        services.AddSingleton<MainViewModel>();
+        services.AddSingleton<AppViewModel>();
         services.AddSingleton<HomeViewModel>();
         services.AddSingleton<SettingsViewModel>();
         services.AddSingleton<INavigationService, NavigationService>();
@@ -29,7 +30,7 @@ public partial class App : Application
 
     protected override void OnStartup(StartupEventArgs e)
     {
-        var mainWindow = _serviceProvider.GetRequiredService<MainWindow>();
+        var mainWindow = _serviceProvider.GetRequiredService<AppView>();
         mainWindow.Show();
         base.OnStartup(e);
     }

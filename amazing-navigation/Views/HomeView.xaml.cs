@@ -13,12 +13,12 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace amazing_navigation.View
+namespace amazing_navigation.Views
 {
     /// <summary>
     /// Interaction logic for HomeView.xaml
     /// </summary>
-    public partial class HomeView : Page
+    public partial class HomeView : UserControl
     {
         public HomeView()
         {

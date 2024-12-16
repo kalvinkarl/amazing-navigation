@@ -1,15 +1,8 @@
 ﻿<Application x:Class="amazing_navigation.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:amazing_navigation"
-             xmlns:viewModel="clr-namespace:amazing_navigation.ViewModels"
-             xmlns:view="clr-namespace:amazing_navigation.View">
+             xmlns:local="clr-namespace:amazing_navigation">
     <Application.Resources>
-        <DataTemplate DataType="{x:Type TypeName=viewModel:HomeViewModel}">
-            <view:HomeView/>
-        </DataTemplate>
-        <DataTemplate DataType="{x:Type TypeName=viewModel:SettingsViewModel}">
-            <view:SettingsView/>
-        </DataTemplate>
+        
     </Application.Resources>
 </Application>

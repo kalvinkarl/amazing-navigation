@@ -13,6 +13,7 @@ public partial class AppViewModel : ViewModel
     public AppViewModel(INavigationService navigationService)
     {
         NavigationService = navigationService;
+        NavigationService.NavigateTo<HomeViewModel>();
     }
 
     [RelayCommand]
